@@ -1,0 +1,57 @@
+bakgrunn = rectangle(440, 320, "solid", "red")
+blue1 = rectangle(40, 320, "solid", "blue")
+blue2 = rectangle(440, 40, "solid", "blue")
+white1 = rectangle(80, 320, "solid", "white")
+white2 = rectangle(440, 80, "solid", "white")
+
+
+
+
+
+put-image(blue1, 150, 160,
+  put-image(blue2, 220, 160,
+    put-image(white2, 220, 160,
+      put-image(white1, 150, 160, 
+        bakgrunn))))
+
+#^^^^^Dette er fra tidligere oppgave og ble brukt som inspirasjon^^^^^^######
+
+
+
+
+fun norden(bakgrunn1, kors1v, kors2v, kors1h, kors2h):
+  frame(
+    overlay-xy(rectangle(35, 320, "solid", kors1v),
+      -150, 0,
+      overlay-xy(rectangle(440, 40, "solid", kors2v),
+        0, -140,
+        overlay-xy(rectangle(80, 320, "solid", kors1h),
+          -130, 0,
+          overlay(rectangle(440, 80, "solid", kors2h),
+            rectangle(440, 320, "solid", bakgrunn1))))))
+end
+
+
+
+
+
+norden("red", "blue", "blue", "white", "white")
+
+
+
+Norway = norden("red", "blue", "blue", "white", "white")
+
+Denmark = norden("red", "white", "white", "white", "white")
+
+Finland = norden("white", "blue", "blue", "blue", "blue")
+
+Iceland = norden("blue", "red", "red", "white", "white")
+
+Sweden = norden("blue", "yellow", "yellow", "yellow", "yellow")
+
+Faroe-islands = norden("white", "red", "red", "blue", "blue")
+
+
+
+
+
